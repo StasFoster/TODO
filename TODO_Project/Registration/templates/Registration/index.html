@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block title %} Register {% endblock title %}
+
+{% block content %}
+<h1> Добро пожаловать в СПИСОК ЗАДАЧ </h1>
+<a href="{% url 'sign_in' %}">Вход</a>
+<a href="{% url 'register' %}">Регистрация</a>
+{% endblock content %}
