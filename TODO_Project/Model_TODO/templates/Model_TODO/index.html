@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %} Список задач {% endblock title %}
+
+{% block content %}
+<a href="{% url 'createTask' %}"> Создать задачу </a>
+<form method="POST" action = "{% url "wellcome" %}">
+    {% csrf_token %}
+    <input type = "submit" value = "Выйти">
+</form>
+{% endblock content %}
