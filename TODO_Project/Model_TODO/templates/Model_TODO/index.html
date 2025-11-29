@@ -8,4 +8,14 @@
     {% csrf_token %}
     <input type = "submit" value = "Выйти">
 </form>
+{% for i in tasks %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type = "hidden" name = "task_id" value="{{ i.id }}"/>
+        {{ i.name_task }}
+        <input type="submit" value = " "/>
+    </form>
+{% empty %}
+    <p> Задач нету </p>
+{% endfor %}
 {% endblock content %}
