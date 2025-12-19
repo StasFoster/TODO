@@ -19,7 +19,7 @@ def register(request):
             return redirect("mylist_task")
             
     form = forms.Registration_Form()
-    return render(request, "Registration/registr.html", {"form":form, "isLogin":False})
+    return render(request, "Registration/registr.html", {"form" , "isLogin":False})
     
 
 def sign_in(request):
